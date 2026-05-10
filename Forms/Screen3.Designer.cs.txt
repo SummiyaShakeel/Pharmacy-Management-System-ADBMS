@@ -1,0 +1,274 @@
+﻿namespace harmacyManagementSystem
+{
+    partial class Screen3
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            btnAdd = new Button();
+            lblMedicineID = new Label();
+            dataGridView1 = new DataGridView();
+            lblMedicineName = new Label();
+            lblCategory = new Label();
+            lblCompany = new Label();
+            lblPrice = new Label();
+            lblQuantity = new Label();
+            lblExpiryDate = new Label();
+            btnUpdate = new Button();
+            btnDelete = new Button();
+            btnClear = new Button();
+            txtMedicineID = new TextBox();
+            txtQuantity = new TextBox();
+            txtPrice = new TextBox();
+            txtCompany = new TextBox();
+            txtCategory = new TextBox();
+            txtMedicineName = new TextBox();
+            txtExpiryDate = new TextBox();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            SuspendLayout();
+            // 
+            // btnAdd
+            // 
+            btnAdd.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnAdd.Location = new Point(124, 284);
+            btnAdd.Name = "btnAdd";
+            btnAdd.Size = new Size(94, 29);
+            btnAdd.TabIndex = 0;
+            btnAdd.Text = "Add";
+            btnAdd.UseVisualStyleBackColor = true;
+            btnAdd.Click += btnAdd_Click_1;
+            // 
+            // lblMedicineID
+            // 
+            lblMedicineID.AutoSize = true;
+            lblMedicineID.Location = new Point(273, 29);
+            lblMedicineID.Name = "lblMedicineID";
+            lblMedicineID.Size = new Size(89, 20);
+            lblMedicineID.TabIndex = 1;
+            lblMedicineID.Text = "Medicine ID";
+            // 
+            // dataGridView1
+            // 
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(31, 329);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowHeadersWidth = 51;
+            dataGridView1.Size = new Size(742, 118);
+            dataGridView1.TabIndex = 2;
+            dataGridView1.CellClick += dataGridView1_CellClick;
+            // 
+            // lblMedicineName
+            // 
+            lblMedicineName.AutoSize = true;
+            lblMedicineName.Location = new Point(273, 62);
+            lblMedicineName.Name = "lblMedicineName";
+            lblMedicineName.Size = new Size(114, 20);
+            lblMedicineName.TabIndex = 3;
+            lblMedicineName.Text = "Medicine Name";
+            // 
+            // lblCategory
+            // 
+            lblCategory.AutoSize = true;
+            lblCategory.Location = new Point(273, 97);
+            lblCategory.Name = "lblCategory";
+            lblCategory.Size = new Size(73, 20);
+            lblCategory.TabIndex = 4;
+            lblCategory.Text = "Category ";
+            // 
+            // lblCompany
+            // 
+            lblCompany.AutoSize = true;
+            lblCompany.Location = new Point(273, 133);
+            lblCompany.Name = "lblCompany";
+            lblCompany.Size = new Size(80, 20);
+            lblCompany.TabIndex = 5;
+            lblCompany.Text = "Company  ";
+            // 
+            // lblPrice
+            // 
+            lblPrice.AutoSize = true;
+            lblPrice.Location = new Point(273, 168);
+            lblPrice.Name = "lblPrice";
+            lblPrice.Size = new Size(41, 20);
+            lblPrice.TabIndex = 6;
+            lblPrice.Text = "Price";
+            // 
+            // lblQuantity
+            // 
+            lblQuantity.AutoSize = true;
+            lblQuantity.Location = new Point(273, 201);
+            lblQuantity.Name = "lblQuantity";
+            lblQuantity.Size = new Size(65, 20);
+            lblQuantity.TabIndex = 7;
+            lblQuantity.Text = "Quantity";
+            // 
+            // lblExpiryDate
+            // 
+            lblExpiryDate.AutoSize = true;
+            lblExpiryDate.Location = new Point(273, 239);
+            lblExpiryDate.Name = "lblExpiryDate";
+            lblExpiryDate.Size = new Size(85, 20);
+            lblExpiryDate.TabIndex = 8;
+            lblExpiryDate.Text = "Expiry Date";
+            // 
+            // btnUpdate
+            // 
+            btnUpdate.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnUpdate.Location = new Point(264, 284);
+            btnUpdate.Name = "btnUpdate";
+            btnUpdate.Size = new Size(94, 29);
+            btnUpdate.TabIndex = 9;
+            btnUpdate.Text = "Update";
+            btnUpdate.UseVisualStyleBackColor = true;
+            btnUpdate.Click += btnUpdate_Click_1;
+            // 
+            // btnDelete
+            // 
+            btnDelete.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnDelete.Location = new Point(401, 284);
+            btnDelete.Name = "btnDelete";
+            btnDelete.Size = new Size(94, 29);
+            btnDelete.TabIndex = 10;
+            btnDelete.Text = "Delete";
+            btnDelete.UseVisualStyleBackColor = true;
+            btnDelete.Click += btnDelete_Click_1;
+            // 
+            // btnClear
+            // 
+            btnClear.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnClear.Location = new Point(539, 284);
+            btnClear.Name = "btnClear";
+            btnClear.Size = new Size(94, 29);
+            btnClear.TabIndex = 11;
+            btnClear.Text = "Clear";
+            btnClear.UseVisualStyleBackColor = true;
+            btnClear.Click += btnClear_Click_1;
+            // 
+            // txtMedicineID
+            // 
+            txtMedicineID.Location = new Point(401, 22);
+            txtMedicineID.Name = "txtMedicineID";
+            txtMedicineID.Size = new Size(125, 27);
+            txtMedicineID.TabIndex = 12;
+            txtMedicineID.TextChanged += txtMedicineID_TextChanged;
+            // 
+            // txtQuantity
+            // 
+            txtQuantity.Location = new Point(401, 194);
+            txtQuantity.Name = "txtQuantity";
+            txtQuantity.Size = new Size(125, 27);
+            txtQuantity.TabIndex = 14;
+            // 
+            // txtPrice
+            // 
+            txtPrice.Location = new Point(401, 161);
+            txtPrice.Name = "txtPrice";
+            txtPrice.Size = new Size(125, 27);
+            txtPrice.TabIndex = 15;
+            // 
+            // txtCompany
+            // 
+            txtCompany.Location = new Point(401, 126);
+            txtCompany.Name = "txtCompany";
+            txtCompany.Size = new Size(125, 27);
+            txtCompany.TabIndex = 16;
+            // 
+            // txtCategory
+            // 
+            txtCategory.Location = new Point(401, 90);
+            txtCategory.Name = "txtCategory";
+            txtCategory.Size = new Size(125, 27);
+            txtCategory.TabIndex = 17;
+            // 
+            // txtMedicineName
+            // 
+            txtMedicineName.Location = new Point(401, 55);
+            txtMedicineName.Name = "txtMedicineName";
+            txtMedicineName.Size = new Size(125, 27);
+            txtMedicineName.TabIndex = 18;
+            // 
+            // txtExpiryDate
+            // 
+            txtExpiryDate.Location = new Point(401, 239);
+            txtExpiryDate.Name = "txtExpiryDate";
+            txtExpiryDate.Size = new Size(125, 27);
+            txtExpiryDate.TabIndex = 13;
+            // 
+            // Screen3
+            // 
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(800, 450);
+            Controls.Add(txtMedicineName);
+            Controls.Add(txtCategory);
+            Controls.Add(txtCompany);
+            Controls.Add(txtPrice);
+            Controls.Add(txtQuantity);
+            Controls.Add(txtExpiryDate);
+            Controls.Add(txtMedicineID);
+            Controls.Add(btnClear);
+            Controls.Add(btnDelete);
+            Controls.Add(btnUpdate);
+            Controls.Add(lblExpiryDate);
+            Controls.Add(lblQuantity);
+            Controls.Add(lblPrice);
+            Controls.Add(lblCompany);
+            Controls.Add(lblCategory);
+            Controls.Add(lblMedicineName);
+            Controls.Add(dataGridView1);
+            Controls.Add(lblMedicineID);
+            Controls.Add(btnAdd);
+            Name = "Screen3";
+            Text = "Screen3";
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
+        }
+
+        #endregion
+
+        private Button btnAdd;
+        private Label lblMedicineID;
+        private DataGridView dataGridView1;
+        private Label lblMedicineName;
+        private Label lblCategory;
+        private Label lblCompany;
+        private Label lblPrice;
+        private Label lblQuantity;
+        private Label lblExpiryDate;
+        private Button btnUpdate;
+        private Button btnDelete;
+        private Button btnClear;
+        private TextBox txtMedicineID;
+        private TextBox txtQuantity;
+        private TextBox txtPrice;
+        private TextBox txtCompany;
+        private TextBox txtCategory;
+        private TextBox txtMedicineName;
+        private TextBox txtExpiryDate;
+    }
+}

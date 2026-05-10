@@ -1,0 +1,167 @@
+﻿using System;
+using System.Data;
+using System.Windows.Forms;
+using Microsoft.Data.SqlClient;
+
+namespace harmacyManagementSystem
+{
+    public partial class Screen6 : Form
+    {
+        public Screen6()
+        {
+            InitializeComponent();
+
+            // 🔥 EVENT CONNECTION FIX
+            btnUpdateStock.Click += btnUpdateStock_Click;
+            btnLowStock.Click += btnLowStock_Click;
+            btnExpired.Click += btnExpired_Click;
+            btnClear.Click += btnClear_Click;
+            dataGridView1.CellClick += dataGridView1_CellClick;
+
+            LoadInventory();
+        }
+
+        private void LoadInventory()
+        {
+            using (SqlConnection con = DBConnection.GetConnection())
+            {
+                con.Open();
+
+                string query = @"
+                    SELECT 
+                        MedicineName,
+                        Category,
+                        Company,
+                        Quantity AS StockQty,
+                        ExpiryDate,
+                        CASE
+                            WHEN ExpiryDate < GETDATE() THEN 'Expired'
+                            WHEN Quantity <= 10 THEN 'Low Stock'
+                            ELSE 'Available'
+                        END AS Status
+                    FROM Medicines";
+
+                SqlDataAdapter da = new SqlDataAdapter(query, con);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+
+                dataGridView1.DataSource = dt;
+                dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            }
+        }
+
+        private void btnUpdateStock_Click(object sender, EventArgs e)
+        {
+            if (txtMedicineName.Text == "" || txtStockQty.Text == "")
+            {
+                MessageBox.Show("Select medicine and enter stock quantity!");
+                return;
+            }
+
+            if (!int.TryParse(txtStockQty.Text, out int qty))
+            {
+                MessageBox.Show("Invalid Stock Quantity!");
+                return;
+            }
+
+            using (SqlConnection con = DBConnection.GetConnection())
+            {
+                con.Open();
+
+                string query = "UPDATE Medicines SET Quantity=@qty WHERE MedicineName=@name";
+
+                SqlCommand cmd = new SqlCommand(query, con);
+                cmd.Parameters.AddWithValue("@qty", qty);
+                cmd.Parameters.AddWithValue("@name", txtMedicineName.Text);
+
+                cmd.ExecuteNonQuery();
+            }
+
+            MessageBox.Show("Stock Updated Successfully!");
+            LoadInventory();
+            ClearFields();
+        }
+
+        private void btnLowStock_Click(object sender, EventArgs e)
+        {
+            using (SqlConnection con = DBConnection.GetConnection())
+            {
+                con.Open();
+
+                string query = @"
+                    SELECT 
+                        MedicineName,
+                        Category,
+                        Company,
+                        Quantity AS StockQty,
+                        ExpiryDate,
+                        'Low Stock' AS Status
+                    FROM Medicines
+                    WHERE Quantity <= 10";
+
+                SqlDataAdapter da = new SqlDataAdapter(query, con);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+
+                dataGridView1.DataSource = dt;
+            }
+        }
+
+        private void btnExpired_Click(object sender, EventArgs e)
+        {
+            using (SqlConnection con = DBConnection.GetConnection())
+            {
+                con.Open();
+
+                string query = @"
+                    SELECT 
+                        MedicineName,
+                        Category,
+                        Company,
+                        Quantity AS StockQty,
+                        ExpiryDate,
+                        'Expired' AS Status
+                    FROM Medicines
+                    WHERE ExpiryDate < GETDATE()";
+
+                SqlDataAdapter da = new SqlDataAdapter(query, con);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+
+                dataGridView1.DataSource = dt;
+            }
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            ClearFields();
+            LoadInventory();
+        }
+
+        private void ClearFields()
+        {
+            txtMedicineName.Clear();
+            txtStockQty.Clear();
+            txtExpiryDate.Clear();
+            txtStatus.Clear();
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = dataGridView1.Rows[e.RowIndex];
+
+                txtMedicineName.Text = row.Cells["MedicineName"].Value?.ToString();
+                txtStockQty.Text = row.Cells["StockQty"].Value?.ToString();
+                txtExpiryDate.Text = row.Cells["ExpiryDate"].Value?.ToString();
+                txtStatus.Text = row.Cells["Status"].Value?.ToString();
+            }
+        }
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            dataGridView1_CellClick(sender, e);
+        }
+    }
+
+}

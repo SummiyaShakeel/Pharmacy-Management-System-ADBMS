@@ -1,0 +1,71 @@
+﻿using System;
+using System.Windows.Forms;
+
+namespace harmacyManagementSystem
+{
+    public partial class Screen7 : Form
+    {
+        string selectedReport = "";
+
+        public Screen7()
+        {
+            InitializeComponent();
+
+            btnSalesReport.Click += btnSalesReport_Click;
+            btnStockReport.Click += btnStockReport_Click;
+            btnCustomerReport.Click += btnCustomerReport_Click;
+            btnExpiryReport.Click += btnExpiryReport_Click;
+            btnGenerateReport.Click += btnGenerateReport_Click;
+            btnClear.Click += btnClear_Click;
+        }
+
+        private void btnSalesReport_Click(object sender, EventArgs e)
+        {
+            selectedReport = "Sales Report";
+            MessageBox.Show("Sales Report Selected");
+        }
+
+        private void btnStockReport_Click(object sender, EventArgs e)
+        {
+            selectedReport = "Stock Report";
+            MessageBox.Show("Stock Report Selected");
+        }
+
+        private void btnCustomerReport_Click(object sender, EventArgs e)
+        {
+            selectedReport = "Customer Report";
+            MessageBox.Show("Customer Report Selected");
+        }
+
+        private void btnExpiryReport_Click(object sender, EventArgs e)
+        {
+            selectedReport = "Expiry Report";
+            MessageBox.Show("Expiry Report Selected");
+        }
+
+        private void btnGenerateReport_Click(object sender, EventArgs e)
+        {
+            if (selectedReport == "")
+            {
+                MessageBox.Show("Please select a report first!");
+                return;
+            }
+
+            MessageBox.Show(selectedReport + " Generated Successfully!");
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            selectedReport = "";
+            MessageBox.Show("Selection Cleared");
+        }
+
+        // Designer duplicate event fixes
+        private void btnSalesReport_Click_1(object sender, EventArgs e) { btnSalesReport_Click(sender, e); }
+        private void btnStockReport_Click_1(object sender, EventArgs e) { btnStockReport_Click(sender, e); }
+        private void btnCustomerReport_Click_1(object sender, EventArgs e) { btnCustomerReport_Click(sender, e); }
+        private void btnExpiryReport_Click_1(object sender, EventArgs e) { btnExpiryReport_Click(sender, e); }
+        private void btnGenerateReport_Click_1(object sender, EventArgs e) { btnGenerateReport_Click(sender, e); }
+        private void btnClear_Click_1(object sender, EventArgs e) { btnClear_Click(sender, e); }
+    }
+}

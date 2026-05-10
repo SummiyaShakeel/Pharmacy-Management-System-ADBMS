@@ -1,0 +1,200 @@
+﻿using System;
+using System.Data;
+using System.Windows.Forms;
+using Microsoft.Data.SqlClient;
+
+namespace harmacyManagementSystem
+{
+    public partial class Screen4 : Form
+    {
+        public Screen4()
+        {
+            InitializeComponent();
+            LoadSuppliers();
+        }
+
+        private void LoadSuppliers()
+        {
+            using (SqlConnection con = DBConnection.GetConnection())
+            {
+                con.Open();
+
+                SqlDataAdapter da = new SqlDataAdapter(
+                    "SELECT SupplierID, SupplierName, ContactNo, Email, Address FROM Suppliers", con);
+
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                dataGridView1.AutoGenerateColumns = true;
+                dataGridView1.DataSource = dt;
+                dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            }
+        }
+
+        private bool ValidateInputs()
+        {
+            if (txtSupplierName.Text == "" ||
+                txtContactNo.Text == "" ||
+                txtEmail.Text == "" ||
+                txtAddress.Text == "")
+            {
+                MessageBox.Show("Please fill all fields!");
+                return false;
+            }
+
+            return true;
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            if (!ValidateInputs()) return;
+
+            using (SqlConnection con = DBConnection.GetConnection())
+            {
+                con.Open();
+
+                string query = "INSERT INTO Suppliers (SupplierName, ContactNo, Email, Address) VALUES (@name, @contact, @email, @address)";
+
+                SqlCommand cmd = new SqlCommand(query, con);
+                cmd.Parameters.AddWithValue("@name", txtSupplierName.Text);
+                cmd.Parameters.AddWithValue("@contact", txtContactNo.Text);
+                cmd.Parameters.AddWithValue("@email", txtEmail.Text);
+                cmd.Parameters.AddWithValue("@address", txtAddress.Text);
+
+                cmd.ExecuteNonQuery();
+
+                MessageBox.Show("Supplier Added Successfully!");
+                LoadSuppliers();
+                ClearFields();
+            }
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            if (txtSupplierID.Text == "")
+            {
+                MessageBox.Show("Select a record first!");
+                return;
+            }
+
+            if (!ValidateInputs()) return;
+
+            using (SqlConnection con = DBConnection.GetConnection())
+            {
+                con.Open();
+
+                string query = "UPDATE Suppliers SET SupplierName=@name, ContactNo=@contact, Email=@email, Address=@address WHERE SupplierID=@id";
+
+                SqlCommand cmd = new SqlCommand(query, con);
+                cmd.Parameters.AddWithValue("@id", Convert.ToInt32(txtSupplierID.Text));
+                cmd.Parameters.AddWithValue("@name", txtSupplierName.Text);
+                cmd.Parameters.AddWithValue("@contact", txtContactNo.Text);
+                cmd.Parameters.AddWithValue("@email", txtEmail.Text);
+                cmd.Parameters.AddWithValue("@address", txtAddress.Text);
+
+                cmd.ExecuteNonQuery();
+
+                MessageBox.Show("Supplier Updated Successfully!");
+                LoadSuppliers();
+                ClearFields();
+            }
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            if (txtSupplierID.Text == "")
+            {
+                MessageBox.Show("Select a record first!");
+                return;
+            }
+
+            using (SqlConnection con = DBConnection.GetConnection())
+            {
+                con.Open();
+
+                string query = "DELETE FROM Suppliers WHERE SupplierID=@id";
+
+                SqlCommand cmd = new SqlCommand(query, con);
+                cmd.Parameters.AddWithValue("@id", Convert.ToInt32(txtSupplierID.Text));
+
+                cmd.ExecuteNonQuery();
+
+                MessageBox.Show("Supplier Deleted Successfully!");
+                LoadSuppliers();
+                ClearFields();
+            }
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            ClearFields();
+        }
+
+        private void ClearFields()
+        {
+            txtSupplierID.Clear();
+            txtSupplierName.Clear();
+            txtContactNo.Clear();
+            txtEmail.Clear();
+            txtAddress.Clear();
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = dataGridView1.Rows[e.RowIndex];
+
+                txtSupplierID.Text = row.Cells["SupplierID"].Value.ToString();
+                txtSupplierName.Text = row.Cells["SupplierName"].Value.ToString();
+                txtContactNo.Text = row.Cells["ContactNo"].Value.ToString();
+                txtEmail.Text = row.Cells["Email"].Value.ToString();
+                txtAddress.Text = row.Cells["Address"].Value.ToString();
+            }
+        }
+
+        private void txtSupplierID_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtContactNo_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtSupplierName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtEmail_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtAddress_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAdd_Click_1(object sender, EventArgs e)
+        {
+            btnAdd_Click(sender, e);
+        }
+
+        private void btnUpdate_Click_1(object sender, EventArgs e)
+        {
+            btnUpdate_Click(sender, e);
+        }
+
+        private void btnDelete_Click_1(object sender, EventArgs e)
+        {
+            btnDelete_Click(sender, e);
+        }
+
+        private void btnClear_Click_1(object sender, EventArgs e)
+        {
+            btnClear_Click(sender, e);
+        }
+    }
+}

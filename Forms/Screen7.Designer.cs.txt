@@ -1,0 +1,139 @@
+﻿namespace harmacyManagementSystem
+{
+    partial class Screen7
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            label1 = new Label();
+            btnSalesReport = new Button();
+            btnStockReport = new Button();
+            btnCustomerReport = new Button();
+            btnGenerateReport = new Button();
+            btnClear = new Button();
+            btnExpiryReport = new Button();
+            SuspendLayout();
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Location = new Point(263, 36);
+            label1.Name = "label1";
+            label1.Size = new Size(323, 41);
+            label1.TabIndex = 0;
+            label1.Text = "Reports Management";
+            // 
+            // btnSalesReport
+            // 
+            btnSalesReport.Font = new Font("Bahnschrift SemiBold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnSalesReport.Location = new Point(203, 113);
+            btnSalesReport.Name = "btnSalesReport";
+            btnSalesReport.Size = new Size(124, 67);
+            btnSalesReport.TabIndex = 1;
+            btnSalesReport.Text = "Sales Report";
+            btnSalesReport.UseVisualStyleBackColor = true;
+            // 
+            // btnStockReport
+            // 
+            btnStockReport.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnStockReport.Location = new Point(502, 113);
+            btnStockReport.Name = "btnStockReport";
+            btnStockReport.Size = new Size(124, 67);
+            btnStockReport.TabIndex = 3;
+            btnStockReport.Text = "Stock Report";
+            btnStockReport.UseVisualStyleBackColor = true;
+            // 
+            // btnCustomerReport
+            // 
+            btnCustomerReport.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnCustomerReport.Location = new Point(203, 230);
+            btnCustomerReport.Name = "btnCustomerReport";
+            btnCustomerReport.Size = new Size(124, 57);
+            btnCustomerReport.TabIndex = 4;
+            btnCustomerReport.Text = "Customer Report";
+            btnCustomerReport.UseVisualStyleBackColor = true;
+            // 
+            // btnGenerateReport
+            // 
+            btnGenerateReport.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnGenerateReport.Location = new Point(315, 324);
+            btnGenerateReport.Name = "btnGenerateReport";
+            btnGenerateReport.Size = new Size(179, 57);
+            btnGenerateReport.TabIndex = 5;
+            btnGenerateReport.Text = "Generate Report";
+            btnGenerateReport.UseVisualStyleBackColor = true;
+            // 
+            // btnClear
+            // 
+            btnClear.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnClear.Location = new Point(315, 409);
+            btnClear.Name = "btnClear";
+            btnClear.Size = new Size(179, 57);
+            btnClear.TabIndex = 6;
+            btnClear.Text = "Clear";
+            btnClear.UseVisualStyleBackColor = true;
+            // 
+            // btnExpiryReport
+            // 
+            btnExpiryReport.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnExpiryReport.Location = new Point(502, 231);
+            btnExpiryReport.Name = "btnExpiryReport";
+            btnExpiryReport.Size = new Size(124, 57);
+            btnExpiryReport.TabIndex = 7;
+            btnExpiryReport.Text = "Expiry Report";
+            btnExpiryReport.UseVisualStyleBackColor = true;
+            // 
+            // Screen7
+            // 
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.ButtonFace;
+            ClientSize = new Size(830, 478);
+            Controls.Add(btnExpiryReport);
+            Controls.Add(btnClear);
+            Controls.Add(btnGenerateReport);
+            Controls.Add(btnCustomerReport);
+            Controls.Add(btnStockReport);
+            Controls.Add(btnSalesReport);
+            Controls.Add(label1);
+            Name = "Screen7";
+            Text = "Screen7";
+            ResumeLayout(false);
+            PerformLayout();
+        }
+
+        #endregion
+
+        private Label label1;
+        private Button btnSalesReport;
+        private Button btnStockReport;
+        private Button btnCustomerReport;
+        private Button btnGenerateReport;
+        private Button btnClear;
+        private Button btnExpiryReport;
+    }
+}

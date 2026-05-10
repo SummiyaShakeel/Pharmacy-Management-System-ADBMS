@@ -1,0 +1,158 @@
+﻿namespace harmacyManagementSystem
+{
+    partial class screen2
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            lblTitle = new Label();
+            btnMedicines = new Button();
+            lblDashboard = new Label();
+            btnSuppliers = new Button();
+            btnSales = new Button();
+            btnInventory = new Button();
+            btnReports = new Button();
+            btnLogout = new Button();
+            SuspendLayout();
+            // 
+            // lblTitle
+            // 
+            lblTitle.AutoSize = true;
+            lblTitle.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblTitle.Location = new Point(176, 52);
+            lblTitle.Name = "lblTitle";
+            lblTitle.Size = new Size(458, 41);
+            lblTitle.TabIndex = 0;
+            lblTitle.Text = "Pharmacy Management System";
+            // 
+            // btnMedicines
+            // 
+            btnMedicines.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnMedicines.Location = new Point(188, 164);
+            btnMedicines.Name = "btnMedicines";
+            btnMedicines.Size = new Size(128, 67);
+            btnMedicines.TabIndex = 1;
+            btnMedicines.Text = "Medicine Management";
+            btnMedicines.UseVisualStyleBackColor = true;
+            btnMedicines.Click += btnMedicines_Click_1;
+            // 
+            // lblDashboard
+            // 
+            lblDashboard.AutoSize = true;
+            lblDashboard.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblDashboard.Location = new Point(322, 108);
+            lblDashboard.Name = "lblDashboard";
+            lblDashboard.Size = new Size(167, 41);
+            lblDashboard.TabIndex = 2;
+            lblDashboard.Text = "Dashboard";
+            // 
+            // btnSuppliers
+            // 
+            btnSuppliers.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnSuppliers.Location = new Point(495, 164);
+            btnSuppliers.Name = "btnSuppliers";
+            btnSuppliers.Size = new Size(139, 67);
+            btnSuppliers.TabIndex = 3;
+            btnSuppliers.Text = "Supplier Management";
+            btnSuppliers.UseVisualStyleBackColor = true;
+            btnSuppliers.Click += btnSuppliers_Click_1;
+            // 
+            // btnSales
+            // 
+            btnSales.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnSales.Location = new Point(188, 273);
+            btnSales.Name = "btnSales";
+            btnSales.Size = new Size(128, 58);
+            btnSales.TabIndex = 4;
+            btnSales.Text = "Sales and Prescription";
+            btnSales.UseVisualStyleBackColor = true;
+            btnSales.Click += btnSales_Click_1;
+            // 
+            // btnInventory
+            // 
+            btnInventory.Font = new Font("Segoe UI", 11F);
+            btnInventory.Location = new Point(495, 273);
+            btnInventory.Name = "btnInventory";
+            btnInventory.Size = new Size(139, 58);
+            btnInventory.TabIndex = 5;
+            btnInventory.Text = "Inventory Management";
+            btnInventory.UseVisualStyleBackColor = true;
+            btnInventory.Click += btnInventory_Click_1;
+            // 
+            // btnReports
+            // 
+            btnReports.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnReports.Location = new Point(205, 356);
+            btnReports.Name = "btnReports";
+            btnReports.Size = new Size(94, 60);
+            btnReports.TabIndex = 6;
+            btnReports.Text = "Reports";
+            btnReports.UseVisualStyleBackColor = true;
+            btnReports.Click += btnReports_Click_1;
+            // 
+            // btnLogout
+            // 
+            btnLogout.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnLogout.Location = new Point(522, 356);
+            btnLogout.Name = "btnLogout";
+            btnLogout.Size = new Size(94, 60);
+            btnLogout.TabIndex = 7;
+            btnLogout.Text = "Logout";
+            btnLogout.UseVisualStyleBackColor = true;
+            btnLogout.Click += btnLogout_Click_1;
+            // 
+            // screen2
+            // 
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(800, 450);
+            Controls.Add(btnLogout);
+            Controls.Add(btnReports);
+            Controls.Add(btnInventory);
+            Controls.Add(btnSales);
+            Controls.Add(btnSuppliers);
+            Controls.Add(lblDashboard);
+            Controls.Add(btnMedicines);
+            Controls.Add(lblTitle);
+            Name = "screen2";
+            Text = "screen2";
+            Load += screen2_Load;
+            ResumeLayout(false);
+            PerformLayout();
+        }
+
+        #endregion
+
+        private Label lblTitle;
+        private Button btnMedicines;
+        private Label lblDashboard;
+        private Button btnSuppliers;
+        private Button btnSales;
+        private Button btnInventory;
+        private Button btnReports;
+        private Button btnLogout;
+    }
+}

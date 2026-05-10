@@ -1,0 +1,49 @@
+﻿using System;
+using System.Windows.Forms;
+using Microsoft.Data.SqlClient;
+
+namespace harmacyManagementSystem
+{
+    public partial class login : Form
+    {
+        public login()
+        {
+            InitializeComponent();
+        }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                using (SqlConnection con = DBConnection.GetConnection())
+                {
+                    con.Open();
+
+                    string query = "SELECT COUNT(*) FROM Users WHERE Username=@user AND Password=@pass";
+
+                    SqlCommand cmd = new SqlCommand(query, con);
+                    cmd.Parameters.AddWithValue("@user", txtUsername.Text);
+                    cmd.Parameters.AddWithValue("@pass", txtPassword.Text);
+
+                    int count = (int)cmd.ExecuteScalar();
+
+                    if (count > 0)
+                    {
+                        MessageBox.Show("Login Successful!");
+
+                        new screen2().Show();
+                        this.Hide();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Invalid Username or Password");
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+    }
+}

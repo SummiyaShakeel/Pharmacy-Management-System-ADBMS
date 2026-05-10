@@ -1,0 +1,93 @@
+﻿using System;
+using System.Windows.Forms;
+
+namespace harmacyManagementSystem
+{
+    public partial class screen2 : Form
+    {
+        public screen2()
+        {
+            InitializeComponent();
+        }
+
+        private void screen2_Load(object sender, EventArgs e)
+        {
+        }
+
+        // ================= MEDICINE =================
+        private void btnMedicines_Click(object sender, EventArgs e)
+        {
+            Screen3 s3 = new Screen3();
+            s3.Show();
+            this.Hide();
+        }
+
+        private void btnMedicines_Click_1(object sender, EventArgs e)
+        {
+            btnMedicines_Click(sender, e);
+        }
+
+        // ================= SUPPLIER =================
+        private void btnSuppliers_Click(object sender, EventArgs e)
+        {
+            Screen4 s4 = new Screen4();
+            s4.Show();
+            this.Hide();
+        }
+
+        private void btnSuppliers_Click_1(object sender, EventArgs e)
+        {
+            btnSuppliers_Click(sender, e);
+        }
+
+        // ================= SALES =================
+        private void btnSales_Click(object sender, EventArgs e)
+        {
+            new Screen5().Show();
+            this.Hide();
+        }
+
+        private void btnSales_Click_1(object sender, EventArgs e)
+        {
+            btnSales_Click(sender, e);
+        }
+
+        // ================= INVENTORY =================
+        private void btnInventory_Click(object sender, EventArgs e)
+        {
+            new Screen6().Show();
+            this.Hide();
+        }
+
+        private void btnInventory_Click_1(object sender, EventArgs e)
+        {
+            btnInventory_Click(sender, e);
+        }
+
+        // ================= REPORTS =================
+        private void btnReports_Click(object sender, EventArgs e)
+        {
+            Screen7 r = new Screen7();
+            r.Show();
+            this.Hide();
+        }
+
+        private void btnReports_Click_1(object sender, EventArgs e)
+        {
+            btnReports_Click(sender, e);
+        }
+
+        // ================= LOGOUT =================
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            login l = new login();
+            l.Show();
+            this.Close();
+        }
+
+        private void btnLogout_Click_1(object sender, EventArgs e)
+        {
+            btnLogout_Click(sender, e);
+        }
+    }
+}

@@ -1,0 +1,246 @@
+﻿namespace harmacyManagementSystem
+{
+    partial class Screen4
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            label1 = new Label();
+            txtSupplierID = new TextBox();
+            btnAdd = new Button();
+            label2 = new Label();
+            label3 = new Label();
+            label4 = new Label();
+            label5 = new Label();
+            label6 = new Label();
+            txtSupplierName = new TextBox();
+            txtAddress = new TextBox();
+            txtEmail = new TextBox();
+            txtContactNo = new TextBox();
+            btnUpdate = new Button();
+            btnDelete = new Button();
+            btnClear = new Button();
+            dataGridView1 = new DataGridView();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            SuspendLayout();
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Location = new Point(230, 22);
+            label1.Name = "label1";
+            label1.Size = new Size(317, 38);
+            label1.TabIndex = 0;
+            label1.Text = "Supplier Management ";
+            // 
+            // txtSupplierID
+            // 
+            txtSupplierID.Location = new Point(174, 90);
+            txtSupplierID.Name = "txtSupplierID";
+            txtSupplierID.Size = new Size(206, 27);
+            txtSupplierID.TabIndex = 1;
+            txtSupplierID.TextChanged += txtSupplierID_TextChanged;
+            // 
+            // btnAdd
+            // 
+            btnAdd.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnAdd.Location = new Point(134, 271);
+            btnAdd.Name = "btnAdd";
+            btnAdd.Size = new Size(94, 29);
+            btnAdd.TabIndex = 2;
+            btnAdd.Text = "Add";
+            btnAdd.UseVisualStyleBackColor = true;
+            btnAdd.Click += btnAdd_Click_1;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(72, 94);
+            label2.Name = "label2";
+            label2.Size = new Size(83, 20);
+            label2.TabIndex = 3;
+            label2.Text = "Supplier ID";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(72, 156);
+            label3.Name = "label3";
+            label3.Size = new Size(108, 20);
+            label3.TabIndex = 4;
+            label3.Text = "Supplier Name";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Location = new Point(72, 217);
+            label4.Name = "label4";
+            label4.Size = new Size(62, 20);
+            label4.TabIndex = 5;
+            label4.Text = "Address";
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Location = new Point(459, 93);
+            label5.Name = "label5";
+            label5.Size = new Size(88, 20);
+            label5.TabIndex = 6;
+            label5.Text = " Contact No";
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Location = new Point(459, 156);
+            label6.Name = "label6";
+            label6.Size = new Size(50, 20);
+            label6.TabIndex = 7;
+            label6.Text = "Email ";
+            // 
+            // txtSupplierName
+            // 
+            txtSupplierName.Location = new Point(174, 153);
+            txtSupplierName.Name = "txtSupplierName";
+            txtSupplierName.Size = new Size(206, 27);
+            txtSupplierName.TabIndex = 8;
+            txtSupplierName.TextChanged += txtSupplierName_TextChanged;
+            // 
+            // txtAddress
+            // 
+            txtAddress.Location = new Point(174, 214);
+            txtAddress.Name = "txtAddress";
+            txtAddress.Size = new Size(574, 27);
+            txtAddress.TabIndex = 9;
+            txtAddress.TextChanged += txtAddress_TextChanged;
+            // 
+            // txtEmail
+            // 
+            txtEmail.Location = new Point(542, 156);
+            txtEmail.Name = "txtEmail";
+            txtEmail.Size = new Size(206, 27);
+            txtEmail.TabIndex = 10;
+            txtEmail.TextChanged += txtEmail_TextChanged;
+            // 
+            // txtContactNo
+            // 
+            txtContactNo.Location = new Point(542, 94);
+            txtContactNo.Name = "txtContactNo";
+            txtContactNo.Size = new Size(206, 27);
+            txtContactNo.TabIndex = 11;
+            txtContactNo.TextChanged += txtContactNo_TextChanged;
+            // 
+            // btnUpdate
+            // 
+            btnUpdate.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnUpdate.Location = new Point(268, 271);
+            btnUpdate.Name = "btnUpdate";
+            btnUpdate.Size = new Size(94, 29);
+            btnUpdate.TabIndex = 12;
+            btnUpdate.Text = "Update";
+            btnUpdate.UseVisualStyleBackColor = true;
+            btnUpdate.Click += btnUpdate_Click_1;
+            // 
+            // btnDelete
+            // 
+            btnDelete.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnDelete.Location = new Point(415, 271);
+            btnDelete.Name = "btnDelete";
+            btnDelete.Size = new Size(94, 29);
+            btnDelete.TabIndex = 13;
+            btnDelete.Text = "Delete";
+            btnDelete.UseVisualStyleBackColor = true;
+            btnDelete.Click += btnDelete_Click_1;
+            // 
+            // btnClear
+            // 
+            btnClear.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnClear.Location = new Point(564, 271);
+            btnClear.Name = "btnClear";
+            btnClear.Size = new Size(94, 29);
+            btnClear.TabIndex = 14;
+            btnClear.Text = "Clear";
+            btnClear.UseVisualStyleBackColor = true;
+            btnClear.Click += btnClear_Click_1;
+            // 
+            // dataGridView1
+            // 
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(61, 325);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowHeadersWidth = 51;
+            dataGridView1.Size = new Size(670, 147);
+            dataGridView1.TabIndex = 15;
+            // 
+            // Screen4
+            // 
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(800, 454);
+            Controls.Add(dataGridView1);
+            Controls.Add(btnClear);
+            Controls.Add(btnDelete);
+            Controls.Add(btnUpdate);
+            Controls.Add(txtContactNo);
+            Controls.Add(txtEmail);
+            Controls.Add(txtAddress);
+            Controls.Add(txtSupplierName);
+            Controls.Add(label6);
+            Controls.Add(label5);
+            Controls.Add(label4);
+            Controls.Add(label3);
+            Controls.Add(label2);
+            Controls.Add(btnAdd);
+            Controls.Add(txtSupplierID);
+            Controls.Add(label1);
+            Name = "Screen4";
+            Text = "Screen4";
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
+        }
+
+        #endregion
+
+        private Label label1;
+        private TextBox txtSupplierID;
+        private Button btnAdd;
+        private Label label2;
+        private Label label3;
+        private Label label4;
+        private Label label5;
+        private Label label6;
+        private TextBox txtSupplierName;
+        private TextBox txtAddress;
+        private TextBox txtEmail;
+        private TextBox txtContactNo;
+        private Button btnUpdate;
+        private Button btnDelete;
+        private Button btnClear;
+        private DataGridView dataGridView1;
+    }
+}
