@@ -39,4 +39,4 @@ Run the script in the /Database folder in your SQL Server instance.
 Modify the DBConnection.cs file to match your local SQL Server instance name.  Run Application: Open the .csproj file in Visual Studio and press Start.  
 
 ## 📜 License
-This project is licensed under the MIT License—free for educational and modification purposes.
+This project is licensed under the MIT License-free for educational and modification purposes.
